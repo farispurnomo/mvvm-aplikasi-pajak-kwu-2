@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.pengaturan.PengaturanFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIconTint="@color/white"
+        app:title="Pengaturan"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivProfil"
+                    android:layout_width="@dimen/_64sdp"
+                    android:layout_height="@dimen/_64sdp"
+                    android:src="@drawable/ic_baseline_account_circle_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvIdUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="ID: 123123123"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/ivProfil"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNamaUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="Momonosuke"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/ivProfil"
+                    app:layout_constraintTop_toBottomOf="@id/tvIdUser" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:layout_constraintStart_toEndOf="@+id/ivProfil"
+                    app:layout_constraintTop_toBottomOf="@id/tvNamaUser" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llInformasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvInformasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Informasi"
+                    android:textColor="#5D5C5C"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_outline_gpp_good_24"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:focusable="true"
+                    android:padding="@dimen/_12sdp"
+                    android:text="Syarat dan Ketentuan"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/tvInformasi" />
+
+                <View
+                    android:id="@+id/vTos"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:background="#ebebeb"
+                    app:layout_constraintTop_toBottomOf="@id/tvTos" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_outline_privacy_tip_24"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:focusable="true"
+                    android:padding="@dimen/_12sdp"
+                    android:text="Kebijakan Privasi"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/vTos" />
+
+                <View
+                    android:id="@+id/vPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:background="#ebebeb"
+                    app:layout_constraintTop_toBottomOf="@id/tvPolicy" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFaq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_baseline_help_outline_24"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:focusable="true"
+                    android:padding="@dimen/_12sdp"
+                    android:text="FAQ"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/vPolicy" />
+
+                <View
+                    android:id="@+id/vFaq"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:background="#ebebeb"
+                    app:layout_constraintTop_toBottomOf="@id/tvFaq" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTentang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_outline_info_24"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:focusable="true"
+                    android:padding="@dimen/_12sdp"
+                    android:text="Tentang Aplikasi"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/vFaq" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_baseline_exit_to_app_24"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:focusable="true"
+                    android:padding="@dimen/_12sdp"
+                    android:text="Logout"
+                    android:textColor="#e90c0c" />
+
+                <View
+                    android:layout_width="@dimen/_280sdp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="#ebebeb" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:text="App ver 0.0.1"
+                    android:textAlignment="center" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
